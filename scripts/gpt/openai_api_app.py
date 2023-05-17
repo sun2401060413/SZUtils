@@ -6,11 +6,15 @@ Created by: Sun Zhu, 2023-05-11, version 0.0
 # ////////// IMPORT //////////
 import os
 import openai
+# ======== Local Lib ========
+if os.path.exists("config_private.py"):
+    from config_private import *
+else:
+    from config import *
 
 # ////////// CONFIG //////////
-openai.api_key = "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"
-openai.organization = "org-qYKrgfbfUNeREsW6osLdhDOS"
-
+openai.api_key = openai_api_key
+openai.organization = openai_organization
 # ////////// CLASS //////////
 
 # ////////// UTILS //////////
